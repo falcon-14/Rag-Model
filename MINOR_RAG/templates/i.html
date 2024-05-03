@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question Answering Web App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+        }
+        form {
+            text-align: center;
+            margin-top: 20px;
+        }
+        label {
+            font-weight: bold;
+        }
+        input[type="text"] {
+            width: 300px;
+            padding: 5px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button[type="submit"] {
+            padding: 5px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        #answer {
+            text-align: center;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Crop Craft- AI</h1>
+    <form id="question-form">
+        <label for="question">Enter your question:</label><br>
+        <input type="text" id="question" name="question"><br>
+        <button type="submit">Submit</button>
+    </form>
+    <div id="answer"></div>
+
+    <script>
+        document.getElementById("question-form").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevent default form submission
+
+    var formData = new FormData(this);
+    var question = formData.get("question");
+
+    // Send question to Flask backend
+    fetch("/ask", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({query: question})
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log("Response from Flask backend:", data); // Debug statement
+        // Display answer on the webpage
+        if (data && data.answer) {
+            document.getElementById("answer").innerHTML = "<strong>Answer:</strong> " + data.answer;
+        } else {
+            document.getElementById("answer").innerHTML = "<strong>Answer:</strong> No answer found.";
+        }
+    })
+    .catch(error => {
+        console.error("Error:", error);
+        document.getElementById("answer").innerHTML = "<strong>Answer:</strong> Error fetching answer.";
+    });
+});
+
+    </script>
+</body>
+</html>
