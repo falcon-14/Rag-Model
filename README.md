@@ -90,4 +90,9 @@ We welcome contributions to enhance CropCraft-AI. Here’s how you can help:
 
 ---
 
+### Screenshots
+
+#### Crop Craft-AI
+![Home Page](images/home.png)
+
 Feel free to explore, use, and contribute to CropCraft-AI! 🌱
