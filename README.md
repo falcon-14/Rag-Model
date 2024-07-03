@@ -37,8 +37,8 @@ CropCraft-AI is an interactive application designed to assist users with farming
 
 1. **Clone the repository:**
     ```bash
-    git clone https://github.com/yourusername/CropCraft-AI.git
-    cd CropCraft-AI
+    git clone https://github.com/falcon-14/Rag-Model.git
+    cd Rag-Model
     ```
 
 2. **Create and activate a virtual environment:**
@@ -47,19 +47,14 @@ CropCraft-AI is an interactive application designed to assist users with farming
     source venv/bin/activate   # On Windows use `venv\Scripts\activate`
     ```
 
-3. **Install the required packages:**
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-4. **Set up environment variables:**
+3. **Set up environment variables:**
     - Create a `.env` file in the root directory.
     - Add your Google API key:
         ```env
         GOOGLE_API_KEY=your_google_api_key_here
         ```
 
-5. **Run the application:**
+4. **Run the application:**
     ```bash
     streamlit run app.py
     ```
@@ -81,10 +76,6 @@ We welcome contributions to enhance CropCraft-AI. Here’s how you can help:
 4. Push to the branch: `git push origin feature-branch`.
 5. Open a pull request.
 
-## 📄 License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
 ## 🙏 Acknowledgements
 
 - [Streamlit](https://www.streamlit.io/)
@@ -96,10 +87,6 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 - [FAISS](https://faiss.ai/)
 - [Langchain](https://langchain.ai/)
 - [PyPDF2](https://pypi.org/project/PyPDF2/)
-
-## 📬 Contact
-
-For any inquiries or issues, please contact [your-email@example.com](mailto:your-email@example.com).
 
 ---
 
