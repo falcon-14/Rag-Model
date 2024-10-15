@@ -15,7 +15,7 @@ from langchain.chains.question_answering import load_qa_chain
 from langchain.prompts import PromptTemplate
 
 load_dotenv()
-os.environ["GOOGLE_API_KEY"] = "AIzaSyAjxGxSRwazR6jQJrctjeTgMwbiWhkFT7Y"  
+os.environ["GOOGLE_API_KEY"] = "Your_API_Token"  
 
 st.set_page_config(page_title="CropCraft-AI", layout="wide")
 
