@@ -21,8 +21,8 @@ from pinecone import Pinecone as PineconeClient #Importing the Pinecone class fr
 from langchain_community.vectorstores import Pinecone
 
 load_dotenv()
-os.environ["HUGGINGFACEHUB_API_TOKEN"] = "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"
-os.environ["PINECONE_API_KEY"] = "ecfd6d7b-eada-40cb-bda5-bda66fc36395"
+os.environ["HUGGINGFACEHUB_API_TOKEN"] = "Your_API_Token"
+os.environ["PINECONE_API_KEY"] = "Your_API_Token"
 PINECONE_API_KEY=os.getenv("PINECONE_API_KEY")
 
 pinecone_client = PineconeClient(api_key=PINECONE_API_KEY)
