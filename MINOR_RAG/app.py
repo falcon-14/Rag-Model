@@ -11,10 +11,10 @@ from pinecone import Pinecone, ServerlessSpec
 app = Flask(__name__)
 
 # Load Hugging Face API token
-os.environ["HUGGINGFACEHUB_API_TOKEN"] = "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"
+os.environ["HUGGINGFACEHUB_API_TOKEN"] = "Your_API_Token"
 
 # Load Pinecone API key
-os.environ["PINECONE_API_KEY"] = "ecfd6d7b-eada-40cb-bda5-bda66fc36395"
+os.environ["PINECONE_API_KEY"] = "Your_API_Token"
 PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
 
 # Initialize Pinecone client
